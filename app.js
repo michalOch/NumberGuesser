@@ -10,7 +10,7 @@ GAME FUNCTION:
 // Game values
 let min = 1,
   max = 10,
-  winningNum = 2,
+  winningNum = getRandomNum(min, max),
   guessesLeft = 3;
 
 // UI Elements
@@ -92,4 +92,11 @@ function gameOver(won, msg) {
   guessBtn.className += 'play-again';
 
   // Add event handler 
+}
+
+
+// Get winning number
+function getRandomNum(min, max) {
+  let randomNum = Math.floor(Math.random() * (max - min + 1) + min);
+  return randomNum;
 }
