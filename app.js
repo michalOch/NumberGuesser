@@ -1,0 +1,1 @@
+alert('Guess a number')
